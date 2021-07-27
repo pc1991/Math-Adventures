@@ -1,0 +1,68 @@
+library(openxlsx)
+library(readxl)
+library(skimr)
+library(tidyverse)
+library(psych)
+library(broom)
+library(jmv)
+Video_Games_Sales <- read_excel("Video Games Sales.xlsx")
+View(Video_Games_Sales)
+
+#Reading & Cleaning
+summary(Video_Games_Sales)
+skim(Video_Games_Sales)
+corr.test(Video_Games_Sales$Rank, Video_Games_Sales$Global)
+plot(Video_Games_Sales$Rank, Video_Games_Sales$Global)
+plot(Video_Games_Sales$Year, Video_Games_Sales$Global)
+ct <- cor.test(Video_Games_Sales$Rank, Video_Games_Sales$Global)
+ct_t <- tidy(ct)
+ct_tp <- ct_t$p.value
+corrMatrix(Video_Games_Sales, vars = vars(Rank, Global), ci = T, plots = T, plotDens = T)
+ggstatsplot::ggscatterstats(Video_Games_Sales, x = Rank, y = Global)
+
+library(AER)
+library(stats)
+library(faraway)
+
+#Linearity
+g <- lm(Rank ~ Year, data = Video_Games_Sales)
+summary(g)
+w <- lm(Rank ~ Global, data = Video_Games_Sales)
+summary(w)
+rmse <- function(x,y) sqrt(mean(x-y)^2)
+rmse(g$Rank, Video_Games_Sales$Global)
+rmse(Video_Games_Sales$Rank, Video_Games_Sales$Global)
+
+#Constant Variance
+plot(fitted(w), residuals(w), xlab = "Fitted", ylab = "Residuals")
+abline(h=0)
+
+#Normality
+qqnorm(residuals(w))
+qqline(residuals(w))
+halfnorm(cooks.distance(w))
+
+#Influential Point Verification
+wi <- influence(w)
+summary(wi)
+show(wi)
+
+#Box-Cox method
+library(MASS)
+boxcox(w, plotit = T)
+
+#Normality verification
+shapiro.test(residuals(w))
+
+#Linear Regression using AIC
+step(w)
+
+#Principal Component Regression
+library(MVA)
+library(pls)
+pcw <- pcr(Rank ~ Global, ncomp = 1, data = Video_Games_Sales)
+summary(pcw)
+plot(RMSEP(pcw), legendpos = "center")
+plot(pcw)
+explvar(pcw)
+predict(pcw)
