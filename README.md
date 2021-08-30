@@ -1,4 +1,3 @@
-![Fitted vs Residuals in Original Linear Model for Online](https://user-images.githubusercontent.com/87962854/131275135-58c3271d-0da4-470b-802b-10ce17d4f756.png)
 # Math-Adventures
 The Adventures In Mathematical Form
 
@@ -18,3 +17,5 @@ Inspiration Education is the most powerful weapon which you can use to change th
 https://github.com/pc1991/Math-Adventures/projects/1#card-67733963
 
 https://github.com/pc1991/Math-Adventures/blob/ecdcc8423413436fb81b0137d2b45a89882cdea4/Fitted%20vs%20Residuals%20in%20Original%20Linear%20Model%20for%20Online.png
+
+![Fitted vs Residuals in Original Linear Model for Online](https://user-images.githubusercontent.com/87962854/131275135-58c3271d-0da4-470b-802b-10ce17d4f756.png)
