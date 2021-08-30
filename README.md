@@ -1,3 +1,4 @@
+![Fitted vs Residuals in Original Linear Model for Online](https://user-images.githubusercontent.com/87962854/131275135-58c3271d-0da4-470b-802b-10ce17d4f756.png)
 # Math-Adventures
 The Adventures In Mathematical Form
 
