@@ -28,3 +28,7 @@ For the quantile-quantile plot with this original model, the fit is mainly accur
 
 ![Half-Norm Of The Online Linear Model](https://user-images.githubusercontent.com/87962854/131276648-51f9c129-e2aa-406c-9a1c-f3e4113e2f5e.png)
 
+The half-normal probability graph basically proves the importance of how viable this model is.
+
+![Box-Cox Method Of Online Linear Model](https://user-images.githubusercontent.com/87962854/131277794-7e87247f-4939-49d9-bb05-d0ae19185223.png)
+
