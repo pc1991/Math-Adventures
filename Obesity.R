@@ -216,8 +216,6 @@ library(corrplot)
 #Regular linear model#
 g <- lm(ID ~ Gender + Maintenance + Junkies + Weight + Plants + Beverages + Alcohol + Diabetes + Hypo + PCOD + Genes + Causes + SimilarConditions, data = df)
 summary(g)
-qqnorm(g)
-qqline(g)
 
 #Predicting the oldschool linear model# 
 p <- predict(g, type = "response")
@@ -227,7 +225,7 @@ qqnorm(p)
 qqline(p)
 
 #Correlation Matrix of the revamped table#
-library(JMV)
+library(jmv)
 corrMatrix(df, vars = vars(ID, Causes), ci = T, plots = T, plotDens = T)
 ggstatsplot::ggscatterstats(df, x = ID, y = Causes)
 
