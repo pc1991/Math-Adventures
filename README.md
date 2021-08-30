@@ -21,3 +21,10 @@ https://github.com/pc1991/Math-Adventures/blob/ecdcc8423413436fb81b0137d2b45a898
 For the original linear model, the majority of the fitted values are not dispersed within the line. A general linear model may be more favorable.
 
 ![Fitted vs Residuals in Original Linear Model for Online](https://user-images.githubusercontent.com/87962854/131275135-58c3271d-0da4-470b-802b-10ce17d4f756.png)
+
+![QQ Plot for Residuals in Online Linear Model](https://user-images.githubusercontent.com/87962854/131276620-790e86c4-b948-41a1-84f0-3705a20788d9.png)
+
+For the quantile-quantile plot with this original model, the fit is mainly accurate throughout.
+
+![Half-Norm Of The Online Linear Model](https://user-images.githubusercontent.com/87962854/131276648-51f9c129-e2aa-406c-9a1c-f3e4113e2f5e.png)
+
